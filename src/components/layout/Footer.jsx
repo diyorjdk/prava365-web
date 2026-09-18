@@ -55,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#features" className="hover:text-blue-400 transition-colors">
-                  70 ta Biletlar To‘plami
+                  130 ta Biletlar To‘plami
                 </a>
               </li>
               <li>

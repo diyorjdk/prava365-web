@@ -5,7 +5,7 @@ export default function HowItWorksSection() {
     {
       step: '01',
       title: 'Rejimni tanlang',
-      desc: 'Mavzulashtirilgan 70 ta biletlardan birini tanlang yoki 20 ta tasodifiy savoldan iborat Haqiqiy Imtihon rejimini yoqing.',
+      desc: 'Mavzulashtirilgan 130 ta biletlardan birini tanlang yoki 20 ta tasodifiy savoldan iborat Haqiqiy Imtihon rejimini yoqing.',
       icon: MousePointerClick,
       color: 'bg-blue-600',
     },

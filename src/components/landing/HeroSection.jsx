@@ -33,7 +33,7 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
-              Prava365 — O‘zbekiston haydovchilikka nomzodlar uchun <strong>yo‘l harakati qoidalari</strong>, <strong>avto test</strong> savollari, <strong>70 ta bilet</strong> va haqiqiy imtihon simulyatori jamlangan zamonaviy mobil ilova. Hoziroq yuklab oling!
+              Prava 365 — O‘zbekiston haydovchilikka nomzodlar uchun <strong>yo‘l harakati qoidalari</strong>, <strong>avto test</strong> savollari, <strong>130 ta bilet</strong> va haqiqiy imtihon simulyatori jamlangan zamonaviy mobil ilova. Hoziroq yuklab oling!
             </p>
 
             {/* App Store & Play Store CTAs */}

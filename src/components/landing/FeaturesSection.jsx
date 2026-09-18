@@ -19,8 +19,8 @@ export default function FeaturesSection() {
       badge: 'Eng Mashhur',
     },
     {
-      title: '70 ta Rasmiy Biletlar',
-      desc: 'Barcha mavzular bo‘yicha tartiblangan 70 ta bilet. Har bir biletni alohida topshiring va qaysi mavzularda bilimingiz kamligini aniqlang.',
+      title: '130 ta Biletlar',
+      desc: 'Barcha mavzular bo‘yicha tartiblangan 130 ta bilet. Har bir biletni alohida topshiring va qaysi mavzularda bilimingiz kamligini aniqlang.',
       icon: Layers,
       color: 'text-indigo-600',
       bg: 'bg-indigo-50',

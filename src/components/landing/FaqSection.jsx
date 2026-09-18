@@ -7,7 +7,7 @@ export default function FaqSection() {
   const faqs = [
     {
       q: 'Prava365 platformasidan foydalanish pullikmi?',
-      a: 'Yo‘q, platformadagi barcha xizmatlar — 70 ta biletlarni yechish, haqiqiy imtihon simulyatori, yo‘l belgilari katalogi va xatolar tahlili mutlaqo bepul taqdim etiladi.',
+      a: 'Yo‘q, platformadagi barcha xizmatlar — 130 ta biletlarni yechish, haqiqiy imtihon simulyatori, yo‘l belgilari katalogi va xatolar tahlili mutlaqo bepul taqdim etiladi.',
     },
     {
       q: 'Test savollari 2026-yilgi yangilangan qoidalarga mosmi?',

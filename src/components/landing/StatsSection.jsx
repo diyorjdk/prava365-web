@@ -3,7 +3,7 @@ import { FileText, HelpCircle, MapPin, TrendingUp } from 'lucide-react'
 export default function StatsSection() {
   const stats = [
     {
-      value: '70 ta',
+      value: '130 ta',
       label: 'Rasmiy Biletlar',
       desc: 'Barcha mavzularni qamrab olgan',
       icon: FileText,
@@ -11,7 +11,7 @@ export default function StatsSection() {
       bg: 'bg-blue-50',
     },
     {
-      value: '1,400+',
+      value: '1,300+',
       label: 'Test Savollari',
       desc: '2026-yilgi eng so‘nggi baza',
       icon: HelpCircle,
