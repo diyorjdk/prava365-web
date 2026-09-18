@@ -1,5 +1,7 @@
-import { ArrowRight, Send, Star, ShieldCheck, Sparkles } from 'lucide-react'
+import { Star, ShieldCheck, Send } from 'lucide-react'
 import InteractiveQuestionDemo from './InteractiveQuestionDemo'
+import { GooglePlayButton, AppStoreButton } from '@/components/common/AppStoreButtons'
+import { APP_LINKS } from '@/constants/links'
 
 export default function HeroSection() {
   return (
@@ -31,27 +33,20 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
-              Prava365 — O‘zbekiston haydovchilikka nomzodlar uchun <strong>1,400+ ta rasmiy savol</strong>, <strong>70 ta bilet</strong>, yo‘l belgilari va haqiqiy imtihon simulyatori jamlangan zamonaviy, tezkor va mutlaqo bepul onlayn test platformasi.
+              Prava365 — O‘zbekiston haydovchilikka nomzodlar uchun <strong>1,400+ ta rasmiy savol</strong>, <strong>70 ta bilet</strong>, yo‘l belgilari va haqiqiy imtihon simulyatori jamlangan zamonaviy mobil ilova. Hoziroq yuklab oling!
             </p>
 
-            {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+            {/* App Store & Play Store CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-10">
+              <GooglePlayButton theme="dark" className="w-full sm:w-auto justify-center" />
+              <AppStoreButton theme="dark" className="w-full sm:w-auto justify-center" />
               <a
-                href="#features"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-lg shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
-              >
-                <Sparkles className="w-5 h-5" />
-                <span>Testni Boshlash</span>
-                <ArrowRight className="w-4 h-4 ml-0.5" />
-              </a>
-
-              <a
-                href="https://t.me/Prava365Bot"
+                href={APP_LINKS.telegramBot}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-slate-900 hover:bg-slate-950 text-white font-bold text-base shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-all duration-200"
               >
-                <Send className="w-4 h-4 text-blue-400" />
+                <Send className="w-4 h-4 text-blue-500" />
                 <span>Telegram Bot</span>
               </a>
             </div>
@@ -74,7 +69,7 @@ export default function HeroSection() {
                     +50k
                   </div>
                 </div>
-                <span className="font-semibold text-slate-800">50,000+ o‘quvchilar</span>
+                <span className="font-semibold text-slate-800">50,000+ yuklab olishlar</span>
               </div>
 
               {/* Rating */}

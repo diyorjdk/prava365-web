@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, Car, Send, Sparkles } from 'lucide-react'
+import { Menu, X, Car, Send, Download } from 'lucide-react'
+import { APP_LINKS } from '@/constants/links'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -39,7 +40,7 @@ export default function Navbar() {
           {/* Desktop Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="https://t.me/Prava365Bot"
+              href={APP_LINKS.telegramBot}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-slate-700 font-bold text-xs hover:bg-slate-100 transition-colors border border-slate-200"
@@ -49,11 +50,13 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#features"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              href={APP_LINKS.playStore}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Testni boshlash</span>
+              <Download className="w-3.5 h-3.5" />
+              <span>Ilovani yuklab olish</span>
             </a>
           </div>
 
@@ -89,7 +92,7 @@ export default function Navbar() {
 
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
             <a
-              href="https://t.me/Prava365Bot"
+              href={APP_LINKS.telegramBot}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-100 text-slate-800 font-bold text-sm"
@@ -99,12 +102,13 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#features"
-              onClick={() => setIsOpen(false)}
+              href={APP_LINKS.playStore}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-md"
             >
-              <Sparkles className="w-4 h-4" />
-              <span>Testni boshlash</span>
+              <Download className="w-4 h-4" />
+              <span>Ilovani yuklab olish</span>
             </a>
           </div>
         </div>

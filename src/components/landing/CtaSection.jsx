@@ -1,4 +1,6 @@
-import { ArrowRight, Send, Sparkles, CheckCircle2 } from 'lucide-react'
+import { Send, Sparkles, CheckCircle2 } from 'lucide-react'
+import { GooglePlayButton, AppStoreButton } from '@/components/common/AppStoreButtons'
+import { APP_LINKS } from '@/constants/links'
 
 export default function CtaSection() {
   return (
@@ -16,30 +18,24 @@ export default function CtaSection() {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black mb-6 tracking-tight leading-tight">
-            Bugun boshlang, ertaga prava oling!
+            Bugun yuklab oling, ertaga prava oling!
           </h2>
 
           <p className="text-base sm:text-lg text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Avtomaktab imtihonini xotirjam va ishonch bilan topshirish uchun hoziroq birinchi biletni yechishni boshlang.
+            Avtomaktab imtihonini xotirjam va ishonch bilan topshirish uchun hoziroq ilovani bepul yuklab oling.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <GooglePlayButton theme="light" className="w-full sm:w-auto justify-center" />
+            <AppStoreButton theme="light" className="w-full sm:w-auto justify-center" />
             <a
-              href="#features"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-9 py-4 rounded-2xl bg-white text-blue-600 font-extrabold text-base hover:bg-blue-50 transition-all shadow-lg shadow-black/10 transform hover:-translate-y-0.5"
-            >
-              <span>Bepul Testni Boshlash</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-
-            <a
-              href="https://t.me/Prava365Bot"
+              href={APP_LINKS.telegramBot}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-base border border-white/20 backdrop-blur-md transition-all transform hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white font-bold text-sm border border-white/20 backdrop-blur-md transition-all transform hover:-translate-y-0.5"
             >
               <Send className="w-4 h-4 text-blue-200" />
-              <span>Telegram Botni Ochish</span>
+              <span>Telegram Bot</span>
             </a>
           </div>
 
@@ -54,7 +50,7 @@ export default function CtaSection() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-              Barcha qurilmalarda ishlaydi
+              Android va iOS qo‘llab-quvvatlanadi
             </span>
           </div>
         </div>

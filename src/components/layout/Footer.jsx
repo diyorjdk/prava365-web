@@ -1,4 +1,5 @@
-import { Car, Send, Mail, ShieldCheck, Heart } from 'lucide-react'
+import { Car, Send, Mail, ShieldCheck, Heart, Smartphone } from 'lucide-react'
+import { APP_LINKS } from '@/constants/links'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -16,7 +17,7 @@ export default function Footer() {
               <span>Prava<span className="text-blue-500">365</span></span>
             </div>
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed mb-6">
-              Haydovchilik guvohnomasini birinchi urinishdayoq olishda ishonchli hamrohingiz. 2026-yilgi yangi YHQ testlari, yo‘l belgilari va jarimalar ma‘lumotnomasi.
+              Haydovchilik guvohnomasini birinchi urinishdayoq olishda ishonchli hamrohingiz. 2026-yilgi yangi YHQ testlari, yo‘l belgilari va imtihon simulyatori.
             </p>
             <div className="flex items-center gap-2 text-xs text-emerald-400 font-semibold bg-emerald-950/60 border border-emerald-800/80 px-3 py-1.5 rounded-lg w-fit">
               <ShieldCheck className="w-4 h-4" />
@@ -27,12 +28,29 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="md:col-span-3">
             <h4 className="text-xs font-bold text-slate-200 tracking-wider uppercase mb-4">
-              Platforma
+              Mobil Ilova
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#features" className="hover:text-blue-400 transition-colors">
-                  Haqiqiy Imtihon Simulyatori
+                <a
+                  href={APP_LINKS.playStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-blue-400"
+                >
+                  <Smartphone className="w-4 h-4" />
+                  <span>Google Play (Android)</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={APP_LINKS.appStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-slate-300"
+                >
+                  <Smartphone className="w-4 h-4" />
+                  <span>App Store (iOS)</span>
                 </a>
               </li>
               <li>
@@ -43,11 +61,6 @@ export default function Footer() {
               <li>
                 <a href="#features" className="hover:text-blue-400 transition-colors">
                   Yo‘l Belgilari & Chiziqlari
-                </a>
-              </li>
-              <li>
-                <a href="#features" className="hover:text-blue-400 transition-colors">
-                  YHQ Jarimalar Jadvali
                 </a>
               </li>
             </ul>
@@ -61,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="https://t.me/Prava365Bot"
+                  href={APP_LINKS.telegramBot}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium"
@@ -72,17 +85,17 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:support@prava365.uz"
+                  href={`mailto:${APP_LINKS.supportEmail}`}
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4 text-slate-500" />
-                  <span>support@prava365.uz</span>
+                  <span>{APP_LINKS.supportEmail}</span>
                 </a>
               </li>
             </ul>
 
             <div className="mt-6 p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-400 leading-normal">
-              Platformadan foydalanish mutlaqo bepul bo‘lib, haydovchilik madaniyatini oshirish maqsadida yaratilgan.
+              Ilova mutlaqo bepul bo‘lib, haydovchilik imtihonlariga sifatli tayyorlanish maqsadida yaratilgan.
             </div>
           </div>
         </div>
