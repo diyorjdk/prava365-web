@@ -1,4 +1,4 @@
-import { CheckCircle2, Layers, Sparkles, Code2 } from 'lucide-react'
+import { CheckCircle2, Sparkles, Code2 } from 'lucide-react'
 
 export default function HomePage() {
   const stackItems = [
