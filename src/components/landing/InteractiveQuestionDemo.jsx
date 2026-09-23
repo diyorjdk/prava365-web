@@ -37,9 +37,9 @@ export default function InteractiveQuestionDemo() {
       {/* Decorative Glow */}
       <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-lg opacity-25"></div>
 
-      <div className="relative bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+      <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-200">
         {/* Header bar */}
-        <div className="bg-slate-900 text-white px-5 py-3.5 flex items-center justify-between">
+        <div className="bg-slate-900 dark:bg-slate-950 text-white px-5 py-3.5 flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
             <span className="text-xs font-semibold tracking-wide uppercase text-slate-300">
@@ -54,37 +54,37 @@ export default function InteractiveQuestionDemo() {
         {/* Content area */}
         <div className="p-5">
           {/* Question visual illustration */}
-          <div className="mb-4 bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-center gap-4">
-            <div className="w-16 h-16 shrink-0 rounded-full bg-red-600 border-4 border-white shadow-md flex items-center justify-center">
+          <div className="mb-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 rounded-xl p-4 flex items-center gap-4">
+            <div className="w-16 h-16 shrink-0 rounded-full bg-red-600 border-4 border-white dark:border-slate-700 shadow-md flex items-center justify-center">
               <div className="w-9 h-2.5 bg-white rounded-xs"></div>
             </div>
             <div>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 Belgi: {sampleQuestion.signNumber}
               </p>
-              <h4 className="text-sm font-bold text-slate-900">
+              <h4 className="text-sm font-bold text-slate-900 dark:text-white">
                 {sampleQuestion.signName}
               </h4>
             </div>
           </div>
 
           {/* Question Text */}
-          <p className="text-sm font-medium text-slate-800 mb-4">
+          <p className="text-sm font-medium text-slate-800 dark:text-slate-100 mb-4">
             {sampleQuestion.question}
           </p>
 
           {/* Options */}
           <div className="space-y-2 mb-4">
             {sampleQuestion.options.map((option) => {
-              let optionStyle = 'bg-white hover:bg-slate-50 border-slate-200 text-slate-800'
+              let optionStyle = 'bg-white dark:bg-slate-800/70 hover:bg-slate-50 dark:hover:bg-slate-800 border-slate-200 dark:border-slate-700/80 text-slate-800 dark:text-slate-200'
               
               if (isSubmitted) {
                 if (option.isCorrect) {
-                  optionStyle = 'bg-emerald-50 border-emerald-500 text-emerald-950 ring-1 ring-emerald-500'
+                  optionStyle = 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 dark:border-emerald-600 text-emerald-950 dark:text-emerald-200 ring-1 ring-emerald-500'
                 } else if (selectedAnswer === option.id) {
-                  optionStyle = 'bg-rose-50 border-rose-500 text-rose-950 ring-1 ring-rose-500'
+                  optionStyle = 'bg-rose-50 dark:bg-rose-950/40 border-rose-500 dark:border-rose-600 text-rose-950 dark:text-rose-200 ring-1 ring-rose-500'
                 } else {
-                  optionStyle = 'opacity-50 border-slate-200 bg-slate-50'
+                  optionStyle = 'opacity-50 border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 text-slate-600 dark:text-slate-400'
                 }
               }
 
@@ -98,10 +98,10 @@ export default function InteractiveQuestionDemo() {
                 >
                   <span className="leading-snug">{option.text}</span>
                   {isSubmitted && option.isCorrect && (
-                    <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                   )}
                   {isSubmitted && !option.isCorrect && selectedAnswer === option.id && (
-                    <XCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                    <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
                   )}
                 </button>
               )
@@ -113,19 +113,19 @@ export default function InteractiveQuestionDemo() {
             <div
               className={`p-3.5 rounded-xl text-xs leading-relaxed animate-in fade-in duration-300 mb-4 ${
                 isCorrect
-                  ? 'bg-emerald-50 border border-emerald-200 text-emerald-900'
-                  : 'bg-amber-50 border border-amber-200 text-amber-900'
+                  ? 'bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800/80 text-emerald-900 dark:text-emerald-200'
+                  : 'bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/80 text-amber-900 dark:text-amber-200'
               }`}
             >
               <div className="flex items-center gap-1.5 font-bold mb-1">
                 {isCorrect ? (
                   <>
-                    <Award className="w-4 h-4 text-emerald-600" />
+                    <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     <span>Ofarin! To‘g‘ri javob!</span>
                   </>
                 ) : (
                   <>
-                    <HelpCircle className="w-4 h-4 text-amber-600" />
+                    <HelpCircle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                     <span>Qoidaga e'tibor bering:</span>
                   </>
                 )}
@@ -135,13 +135,13 @@ export default function InteractiveQuestionDemo() {
           )}
 
           {/* Footer action */}
-          <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs text-slate-500">
+          <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
             <span>{!isSubmitted ? 'Bitta javobni tanlang' : 'Natija qayd etildi'}</span>
             {isSubmitted && (
               <button
                 type="button"
                 onClick={handleReset}
-                className="inline-flex items-center gap-1 font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                className="inline-flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 Qayta sinash
