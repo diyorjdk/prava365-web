@@ -100,6 +100,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Popular SEO Search Clusters */}
+        <div className="py-6 border-b border-slate-900/80 text-xs">
+          <p className="text-slate-400 font-semibold mb-2.5">Mashhur qidiruv mavzulari:</p>
+          <div className="flex flex-wrap gap-2 text-slate-400 text-[11px]">
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Prava test 2026</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Haydovchilik guvohnomasi imtihoni</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">130 ta bilet testlari</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Avto test online</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">GAI imtihon simulyatori</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Yo‘l harakati qoidalari (YHQ)</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Yo‘l belgilari va chiziqlari</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">YHQ jarimalari & BHM 2026</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Тесты ПДД Узбекистан онлайн</span>
+            <span className="px-2.5 py-1 rounded-md bg-slate-900/80 border border-slate-800">Экзамен ГАИ Узбекистан</span>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {currentYear} Prava365. Barcha huquqlar himoyalangan.</p>
